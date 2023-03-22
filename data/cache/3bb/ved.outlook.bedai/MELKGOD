@@ -1,0 +1,86 @@
+Diagnostic information for administrators:
+
+Generating server: PH0PR04MB7560.namprd04.prod.outlook.com
+
+tharock312@hotmail.com
+Remote server returned '550 5.5.0 Requested action not taken: mailbox unavailable.'
+
+Original message headers:
+
+Received: from DM6PR04CA0006.namprd04.prod.outlook.com (2603:10b6:5:334::11)
+ by PH0PR04MB7560.namprd04.prod.outlook.com (2603:10b6:510:4e::20) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6178.37; Wed, 22 Mar
+ 2023 21:29:15 +0000
+Received: from DM6NAM10FT029.eop-nam10.prod.protection.outlook.com
+ (2603:10b6:5:334:cafe::65) by DM6PR04CA0006.outlook.office365.com
+ (2603:10b6:5:334::11) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6178.37 via Frontend
+ Transport; Wed, 22 Mar 2023 21:29:15 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.208.53)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.208.53 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.208.53; helo=mail-ed1-f53.google.com; pr=C
+Received: from mail-ed1-f53.google.com (209.85.208.53) by
+ DM6NAM10FT029.mail.protection.outlook.com (10.13.152.62) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6222.17 via Frontend Transport; Wed, 22 Mar 2023 21:29:15 +0000
+X-IncomingTopHeaderMarker: OriginalChecksum:6EEF9B890476B0A5E683D91A1767807EF0E3C19AEE43A78827F857BC6C67F2EE;UpperCasedChecksum:7850A5F78700AA21D75050B56176D43DE4F1F653CC21AF1B8FC26654D445FCB7;SizeAsReceived:2505;Count:13
+Received: by mail-ed1-f53.google.com with SMTP id b20so45647496edd.1
+        for <tharock312@hotmail.com>; Wed, 22 Mar 2023 14:29:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112; t=1679520555;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=gQX/DK1A8mBlWcOen+YE4O77Jm64zCM7FsIQ53ODsg8=;
+        b=Ju2gKgBL3oJAYVlqp8Crq5DmfiEL0JPRlU9jYkkULXJRJkYXWGgRy9GTarnWJZMd8j
+         lxi31MCYR64wjLotM0KMAqQ0NGIusY1O9Q9u9Dj4miml6l8BVTYYU+agxE0heRgCxQXn
+         96MzRNbo+VDQPINGDzIb8aMrgLY7Wttsb44KQot83TVUInBMATQ/JU08z87wV4J+tuWU
+         6zxBSGvKzQDUYD+ZafAVzEYu2WjQf3X4jktOfU6gobTy6PQUyhhUadY3n+iDtqrTl/6q
+         6JYxY+lMjoYI5j057bcK6vT68ewHp8TYrMBbazBtmE9hzstKx4x7uXv0Dqfi89IEbFxG
+         nI/g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112; t=1679520555;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=gQX/DK1A8mBlWcOen+YE4O77Jm64zCM7FsIQ53ODsg8=;
+        b=OMYQvvfyGklXt/s3PjWbNj9uo1b59wWpcNONMev/PZv5m45Af+dolxPwwpqrOUcjyK
+         hwXAKABNG+iSkqlrputQFZmIxC0xgIYAXDQC01lRU965IXp1FK9Clg5mGVmlN0eRotWJ
+         mnkg8uHcVJe6LlvrDJflenpodHQyHd3vw0SqSQ+Zo3qFRwv1MBQ5IhyTeHdxSG/lGSj5
+         uMK+CoImN2ANtZJY2AiP7cWS5nFolhp48IHADk7uCdxq82y847g/h+SkiqsZoZD+HD6D
+         7NE10ADIftXt10iyg0aF/kHzukXkjOfVf2rNcoI/2VFb42GK0BfwWXrcihSvW7JguOAq
+         303A==
+X-Gm-Message-State: AO0yUKUqGl1sG2tBRrifJCiwf32bqEgwenjH4HI2juPV2/llaeuQSgSN
+	wV4BYN32l7u0Oh6NMjtsIoluIZY1q+0wAXj/FlkgFtytp7YLTw==
+X-Google-Smtp-Source: AK7set8+BqGbdnVozdTvlpf9qJnpXvc/WBr4D+LRBcrnX3Y/bV7zXggdfjtFPQ4x+lhNfJ9sWp6zwX0g7VFj1a2s0m8=
+X-Received: by 2002:a50:d58f:0:b0:501:dd51:e9eb with SMTP id
+ v15-20020a50d58f000000b00501dd51e9ebmr3594621edi.3.1679520554599; Wed, 22 Mar
+ 2023 14:29:14 -0700 (PDT)
+MIME-Version: 1.0
+From: JACOB STERNBERG <iunsomethin24fps@gmail.com>
+Date: Wed, 22 Mar 2023 11:29:03 -1000
+Message-ID: <CAGXGdw-GH1T0h+MzVYSV2nkh24TbrTnDFOJm=pDkAiAqyVBORg@mail.gmail.com>
+Subject: **r13n__________________________________file:/:/:/:/:/gh repo clone iunsomethin24fps/jake-ved.outlook.bedai-______________________________________________________**
+To: JACOB STERNBERG <iunsomethin24fps@gmail.com>, tharock312@hotmail.com, 
+	postmster@outlook.com
+Content-Type: multipart/related; boundary="0000000000000d0c3905f783daee"
+X-IncomingHeaderCount: 13
+Return-Path: iunsomethin24fps@gmail.com
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: DM6NAM10FT029:EE_|PH0PR04MB7560:EE_
+X-MS-Office365-Filtering-Correlation-Id: 5a0763ba-3d93-463e-131d-08db2b1c7c93
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 209.85.208.53
+X-SID-PRA: IUNSOMETHIN24FPS@GMAIL.COM
+X-SID-Result: PASS
+X-Microsoft-Antispam: BCL:0;
+X-Microsoft-Antispam-Message-Info:
+	DDd2ul/ZYLkQfsZQsNRvF0lqgipsQt/FWfgH7hSUx9oU0Cw/9Rzf6HCKlkNrLC/7fUBe4mmt9g/B/CVC/DZCv7FDIWvMSxUR48tS0nFEXGMTKl/CDxJCvySEMr1BqNvhTywVhL6BOe5Yoe3C3yWDdkvNnxJCrT6zKs6itFrrTvHvShKrVXrygx11Tv/li92kD585qOBxKhsNe/HspkQ6OMgneGuaTgHOwBbdJ8ZRpp2DLNbg4d3yMRMJkPcYewaz9oB+5X36x2guKfiDLcQZ3xYn+kQ4uGbgfYk58UOIfqtorF35+MkF3jJ53EF5wfNK1sIBNT86RUrVucU0BKevX64uPXlQPyKzecSmQcoTbtEMsFQu+ikECn8RI6YzmAltiZeVfMF6+vaJFcqol3Y7kD1OhCE7ymoiytrZY4eu4ADAG1Spip1MzDLZdQSAAgEUnIWgGMJtuUtt1U5kH1jz/mPkvu5Z48hCW84mBgOKqCWU+mBuzvfjkT1Q+vcCOIEgRT+pG1N2ESRWkfBrIeJyCW+OHhvXsTktb8zi844O0UpcHhTqX6FBBvfYSytTvcR5lpFOYtWNKfWML45REQxdprKuKRLHejJfi451oXx46px9U0juwW1J5ZnuU5zmAALhdMVtpNQABimMgEG1yQImShMXSeYTE1+OU3YnGOX2BFs1kJvZPDgDtEdTg96ZN5zltsc512g26pHJ1R0mZS5GOU29NQujGzb6rUS8gTomudUi5ZIEX+I4ADAr6opJOl3cl2ciX7+2Z6HAYREP88kso/rk1CtkJBrr2cPBNSbIpVa3G/cl9vUVkUhWAyjd9yDwZZza6yJMars+wElauELWlsOlp5d947GfTwU0b1T3Kv4=
+
+What?What is this?Why?
+Reply
+Forward
